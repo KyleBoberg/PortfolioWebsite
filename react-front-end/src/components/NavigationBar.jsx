@@ -1,6 +1,13 @@
 
 
-export default function NavigationBar() {
+export default function NavigationBar({projectsSectionRef, experienceSectionRef}) {
+
+    const scrollToSection = (sectionRef) => {
+        if (sectionRef.current) {
+            sectionRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <nav
             style={{
@@ -17,9 +24,11 @@ export default function NavigationBar() {
                     alignItems: 'center',
                 }}
             >
-                <p>Kyle</p>
-                <p>Projects</p>
-                <p>Experience</p>
+                <button className="navButton">Kyle</button>
+                <button className="navButton" onClick={scrollToSection(projectsSectionRef)}>Projects</button>
+                <button className="navButton">Technologies</button>
+                <button className="navButton" onClick={scrollToSection(experienceSectionRef)}>Experience</button>
+                <button className="navButton">Technologies</button>
             </div>
 
         </nav>

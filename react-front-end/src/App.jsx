@@ -1,10 +1,14 @@
 import './App.scss'
 
+import { useRef } from 'react'
+
 import NavigationBar from './components/NavigationBar'
 import Projects from './components/Projects'
 import Experience from './components/Experience'  
 
 function App() {
+  const projectsSectionRef = useRef(null);
+  const experienceSectionRef = useRef(null);
 
 
   return (
@@ -32,13 +36,16 @@ function App() {
       </div>
 
       <div className='text-container'>
-        <NavigationBar />
+        <NavigationBar 
+          projectsSectionRef={projectsSectionRef}
+          experienceSectionRef={experienceSectionRef}
+        />
 
         <h1>Kyle Boberg</h1>
         <p>Software Developer</p>
 
-        <Projects />
-        <Experience />
+        <Projects ref={projectsSectionRef} />
+        <Experience ref={experienceSectionRef} />
       </div>
     </>
   )
