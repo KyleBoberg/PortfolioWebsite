@@ -1,9 +1,62 @@
+@font-face {
+  font-family: 'FuturaEmphasis'; /* Choose a name for your font-family */
+  src: local('tt0205.ttf'), /* Name of the font as installed on the system */
+        url('./assets/fonts/tt0205m.ttf') format('truetype'); /* Fallback URL for the font file */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futura'; /* Choose a name for your font-family */
+  src: local('Future Book font.ttf'), /* Name of the font as installed on the system */
+        url('./assets/fonts/Future Book font.ttf') format('truetype'); /* Fallback URL for the font file */
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 html, body {
-  font-family: 'Dongle', sans-serif;
+  font-family: 'Futura', sans-serif;
   margin: 0;
   padding: 0;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'FuturaEmphasis', sans-serif;
+  margin: .1rem;
+}
+
+p {
+  margin: .1rem;
+}
+
+.skillTagDiv{
+  display: inline-block;
+  padding: 0.1em .5em;
+  border-radius: 999px;
+  color: #fff;
+  margin: 0.1em;
+  border: none;
+}
+
+.collapser {
+  display: flex;
+  align-items: start;
+  cursor: pointer;
+  gap: 10px;
+  padding: 10px;
+}
+
+.collapsee {
+  transition: max-height 0.6s ease-in-out;  
+  max-height: 1000px; // Arbitrary large value to allow expansion
+  overflow: hidden;
+  &.closed {
+    max-height: 0;
+  }
+}
+
+
 
 // Variables for easy customization
 $link-color: #000000;
