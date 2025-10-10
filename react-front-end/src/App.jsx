@@ -5,6 +5,7 @@ import { useRef } from 'react'
 import NavigationBar from './components/NavigationBar'
 import Projects from './components/Projects'
 import Experience from './components/Experience'  
+import Education from './components/Education'
 
 function App() {
   const projectsSectionRef = useRef(null);
@@ -46,6 +47,7 @@ function App() {
 
         <Projects ref={projectsSectionRef} />
         <Experience ref={experienceSectionRef} />
+        <Education />
       </div>
     </>
   )

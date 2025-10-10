@@ -7,7 +7,7 @@ export default function Experience() {
             <div>
                 <JobExperienceDiv
                     company="TS Partners" 
-                    companyImage="https://media.licdn.com/dms/image/v2/D4E0BAQG3zol2k6sxCA/company-logo_100_100/company-logo_100_100/0/1693419702221/ts_partners_inc_logo?e=1762387200&v=beta&t=iIUDSbX15mdH8EtpKNphkd8DZ_gBwOUrAfHV3uKT55s" 
+                    companyImage="https://media.licdn.com/dms/image/v2/D4E0BAQG3zol2k6sxCA/company-logo_200_200/company-logo_200_200/0/1693419702221/ts_partners_inc_logo?e=1762992000&v=beta&t=PctN7P1obq2g-RMjmwbpyoY2-EB380n-N9v8zWhiNxw" 
                     dateRange="July 2024 - Present"
                     title="Junior Software Developer" 
                     location="King of Prussia, PA"
@@ -25,7 +25,7 @@ export default function Experience() {
 
                 <JobExperienceDiv
                     company="Amico Lane" 
-                    companyImage="https://media.licdn.com/dms/image/v2/C4E0BAQGReviu2ICfiQ/company-logo_100_100/company-logo_100_100/0/1630604587825/amico_lane_logo?e=1762387200&v=beta&t=ZJEHfmXrreQkGoPcTZIuRz27yjlCcKvKRMqkoHD9QoU" 
+                    companyImage="https://media.licdn.com/dms/image/v2/C4E0BAQGReviu2ICfiQ/company-logo_200_200/company-logo_200_200/0/1630604587825/amico_lane_logo?e=1762992000&v=beta&t=Ba7jyiHyE7KiFchNDZl9WK_KHgEfe9lUHpissCjpv1Y" 
                     dateRange="May 2023 - July 2024"
                     title="Software Development Intern/Consultant"
                     location="Washington, DC"

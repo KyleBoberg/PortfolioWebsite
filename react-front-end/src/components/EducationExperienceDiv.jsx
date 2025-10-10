@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function JobExperienceDiv({company, companyImage, title, location, dateRange, bulletPoints, skillTags, color1, color2}) {
+export default function EducationExperienceDiv({school, schoolImage, degree, location, dateRange, result, sections}) {
     
     const [isOpen, setIsOpen] = useState(false);
 
@@ -23,7 +23,7 @@ export default function JobExperienceDiv({company, companyImage, title, location
                         maxWidth: '100px',
                         maxHeight: '100px'
                     }}
-                    src={companyImage} 
+                    src={schoolImage} 
                 />
                 <div
                     style={{
@@ -39,10 +39,16 @@ export default function JobExperienceDiv({company, companyImage, title, location
                         <div
                             style={{flexGrow: 1}}
                         >
-                            <h2>{company}</h2>
-                            <h3>{title}</h3>
+                            <h2>{school}</h2>
+                            <h3>{degree}</h3>
                         </div>
-                        <h4>{dateRange}</h4>
+
+                        <div
+                            style={{textAlign: "right"}}
+                        >
+                            <h4>{dateRange}</h4>
+                            <p>{result}</p>
+                        </div>
                     </div>
 
                     {/* bottom part of header with location and skill tags */}
@@ -57,22 +63,7 @@ export default function JobExperienceDiv({company, companyImage, title, location
                                 flexGrow: 1,
                             }}
                         >{location}</p>
-                        <div
-                            style={{
-                                display: "flex",
-                                gap: "5px",
-                                flexWrap: "wrap",
-                            }}>
-                            {skillTags && skillTags.map(tag => 
-                                <div className="skillTagDiv"
-                                    style={{
-                                        background: "linear-gradient(110deg, " + color1 + " 0%, " + color2 + " 100%)"
-                                    }}
-                                > 
-                                    <span className="skillTag">{tag}</span> 
-                                </div>
-                            )}
-                        </div>
+                        
                     </div>
                     
                 </div>
@@ -85,9 +76,11 @@ export default function JobExperienceDiv({company, companyImage, title, location
                 }}
             >
                 <ul>
-                {bulletPoints.map(point => <li>
-                    {point}
-                </li>)}
+                {sections.map(section => 
+                <div>
+                    <h3>{section.title}</h3>
+                    <p>{section.text}</p>
+                </div>)}
                 </ul>
             </div>
             
