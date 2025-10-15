@@ -6,6 +6,7 @@ import NavigationBar from './components/NavigationBar'
 import Projects from './components/Projects'
 import Experience from './components/Experience'  
 import Education from './components/Education'
+import Kyle from './components/Kyle'
 
 function App() {
   const projectsSectionRef = useRef(null);
@@ -37,16 +38,10 @@ function App() {
       </div>
 
       <div className='text-container'>
-        <NavigationBar 
-          projectsSectionRef={projectsSectionRef}
-          experienceSectionRef={experienceSectionRef}
-        />
-
-        <h1>Kyle Boberg</h1>
-        <p>Software Developer</p>
-
-        <Projects ref={projectsSectionRef} />
-        <Experience ref={experienceSectionRef} />
+        {/* <NavigationBar /> //no nav for now */}
+        <Kyle />
+        <Projects />
+        <Experience />
         <Education />
       </div>
     </>

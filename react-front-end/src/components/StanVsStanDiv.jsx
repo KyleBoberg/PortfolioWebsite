@@ -8,6 +8,10 @@ export default function StanVsStanDiv() {
         setIsOpen(!isOpen);
     };
 
+    const skillTags = ["React", "Node.js", "Express", "Socket.io", "MongoDB", "JavaScript", "HTML/CSS"];
+    const color2 = "rgb(253, 228, 0)"; 
+    const color1 = "rgb(255, 252, 223)";
+
     return (
         <div className="frosted-glass" 
             style={{
@@ -19,7 +23,24 @@ export default function StanVsStanDiv() {
                 style={{alignItems: "center"}}
             >
                 <h2>Stan vs Stan</h2>  
-                <p>Online multi-player real time song guessing game. Login with Spotify, and try to out "stan" your friends.</p>
+                <p style={{flexGrow: 1}}>Online multi-player real time song guessing game. Login with Spotify, and try to out "stan" your friends.</p>
+                <div
+                    style={{
+                        display: "flex",
+                        gap: "5px",
+                        flexWrap: "wrap",
+                    }}>
+                    {skillTags && skillTags.map(tag => 
+                        <div className="skillTagDiv"
+                            style={{
+                                background: "linear-gradient(110deg, " + color1 + " 0%, " + color2 + " 100%)",
+                                color: "black",
+                            }}
+                        > 
+                            <span className="skillTag">{tag}</span> 
+                        </div>
+                    )}
+                </div>
             </div>
 
             <div className={"collapsee" + (isOpen ? "" : " closed")} >

@@ -3,7 +3,7 @@ import JobExperienceDiv from "./JobExperienceDiv";
 export default function Experience() {
     return (
         <>
-            <h2>Experience</h2>
+            <h2 className="section-header">Experience</h2>
             <div>
                 <JobExperienceDiv
                     company="TS Partners" 

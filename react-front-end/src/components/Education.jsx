@@ -3,7 +3,7 @@ import EducationExperienceDiv from "./EducationExperienceDiv"
 export default function Education() {
     return (
         <>
-            <h2>Education</h2>    
+            <h2 className="section-header">Education</h2>    
             <div>
                 <EducationExperienceDiv
                     school="Stevens Institute of Technology"
