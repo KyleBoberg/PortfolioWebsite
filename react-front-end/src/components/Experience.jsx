@@ -30,7 +30,7 @@ export default function Experience() {
                     title="Software Development Intern/Consultant"
                     location="Washington, DC"
                     bulletPoints={[
-                        "Asked to stay on at the real estate technology start-up following a summer internship to lead technical projects.", 
+                        "Was asked to stay on at the real estate technology start-up following a summer internship to lead technical projects.", 
                         "Led the technology development of a new company-wide KPI monitoring system. Built out multiple interactive KPI dashboards for use by both analysts and management.",
                         "Developed and maintained automations for Amico Lane's cloud-based project management software to increase the speed of processing incoming client requests. ",
                         "Integrated a variety of web services (incl. Google Workspace/Cloud and Xero Accounting) into the company's workflow using APIs and webhooks, allowing for reduced time for task completion and accurate KPI monitoring.",

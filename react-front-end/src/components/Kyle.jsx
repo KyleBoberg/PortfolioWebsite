@@ -10,21 +10,22 @@ export default function Kyle() {
 
             <div style={{
                 display: "flex",
-                gap: ".25rem",
-                alignItems: "center",
+                gap: "1rem",
+                alignItems: "start",
+                flexWrap: "wrap",
             }}>
-                <div>
+                <div style={{flexGrow: 1}}>
                     <h1>Kyle Boberg</h1>
-                    <p>Software Developer</p>
                 </div>
-
 
                 <div 
                     style={{
                     display: "flex",
                     gap: ".25rem",
-                    flexGrow: 1,
-                    justifyContent: "space-around",
+                    justifyContent: "flex-start",
+                    flexWrap: "wrap",
+                    marginTop: "0.5rem",
+                    marginBottom: "0.5rem",
                 }}>
 
                     <div className="contact-item">
@@ -48,10 +49,17 @@ export default function Kyle() {
                     </div>
 
                 </div>
-    
 
             </div>
 
+            <h2>Software Developer</h2>
+            <div style={{
+                marginLeft: "1rem",
+            }} >
+                <p>2024 summa cum laude graduate from Stevens Institute of Technology working full time in tech.</p> 
+                <p>Willing to work hard to get it done. Love to figure stuff out. </p> 
+                <p>Check out some of my personal projects, job experince, and education highlights below.</p>
+            </div>
 
 
 

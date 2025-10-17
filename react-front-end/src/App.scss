@@ -75,6 +75,14 @@ p {
   color: #fff;
   margin: 0.1em;
   border: none;
+  white-space: nowrap;
+}
+
+.skillTagContainer {
+  display: flex;
+  gap: 5px;
+  flex-wrap: nowrap;
+  max-width: 50%;
 }
 
 .collapser {
@@ -83,6 +91,7 @@ p {
   cursor: pointer;
   gap: 10px;
   padding: 10px;
+  overflow-x: hidden;
 }
 
 .collapsee {

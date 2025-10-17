@@ -25,11 +25,7 @@ export default function StanVsStanDiv() {
                 <h2>Stan vs Stan</h2>  
                 <p style={{flexGrow: 1}}>Online multi-player real time song guessing game. Login with Spotify, and try to out "stan" your friends.</p>
                 <div
-                    style={{
-                        display: "flex",
-                        gap: "5px",
-                        flexWrap: "wrap",
-                    }}>
+                    className="skillTagContainer">
                     {skillTags && skillTags.map(tag => 
                         <div className="skillTagDiv"
                             style={{

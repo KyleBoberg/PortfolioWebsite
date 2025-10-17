@@ -58,11 +58,7 @@ export default function JobExperienceDiv({company, companyImage, title, location
                             }}
                         >{location}</p>
                         <div
-                            style={{
-                                display: "flex",
-                                gap: "5px",
-                                flexWrap: "wrap",
-                            }}>
+                            className="skillTagContainer">
                             {skillTags && skillTags.map(tag => 
                                 <div className="skillTagDiv"
                                     style={{

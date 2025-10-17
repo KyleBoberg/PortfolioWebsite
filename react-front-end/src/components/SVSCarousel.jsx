@@ -2,12 +2,17 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
+import { useMediaQuery } from 'react-responsive'
+
 export default function SVSCarousel() {
+  const isTabletOrMobile = useMediaQuery({ maxWidth: 1224 })
+
+
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 2, //make this based on screen size breakpoints
+    slidesToShow: isTabletOrMobile ? 1 : 2, //make this based on screen size breakpoints
     slidesToScroll: 1,
     arrows: true,
   };
