@@ -1,8 +1,12 @@
 import { useState } from "react";
+import { useMediaQuery } from 'react-responsive'
+
 
 export default function EducationExperienceDiv({school, schoolImage, degree, location, dateRange, result, sections}) {
     
     const [isOpen, setIsOpen] = useState(false);
+    const isTabletOrMobile = useMediaQuery({ maxWidth: 1224 })
+
 
     const toggleCollapse = () => {
         setIsOpen(!isOpen);
@@ -18,60 +22,58 @@ export default function EducationExperienceDiv({school, schoolImage, degree, loc
             <div className="collapser"
                 onClick={toggleCollapse}>
                 <img 
-                    style={{
-                        borderRadius: '8px',
-                        maxWidth: '100px',
-                        maxHeight: '100px'
-                    }}
+                    className="logo-image"
                     src={schoolImage} 
                 />
                 <div
                     style={{
-                        width: "100%",
+                        flexGrow: 1,
+                        minWidth: 0,
                     }}
                 >
                     {/* top part of header with company name, title, and date range */}
                     <div
                         style={{
                             display: "flex",
-                            alignItems: "start",   
+                            alignItems: "center",   
+                            flexWrap: "wrap",
                         }}>
-                        <div
+                        <h2
                             style={{flexGrow: 1}}
-                        >
-                            <h2>{school}</h2>
-                            <h3>{degree}</h3>
-                        </div>
-
-                        <div
-                            style={{textAlign: "right"}}
-                        >
-                            <h4>{dateRange}</h4>
-                            <p>{result}</p>
-                        </div>
+                        >{school}</h2>
+                        
+                        <h4>{dateRange}</h4>
                     </div>
+
+                   
 
                     {/* bottom part of header with location and skill tags */}
                     <div
                         style={{
                             display: "flex",
                             alignItems: "center",
+                            flexWrap: "wrap",   
                         }}
                     >
-                        <p
+                        <h3
                             style={{
+                                whiteSpace: "nowrap",
+                                marginRight: "1rem",
                                 flexGrow: 1,
                             }}
-                        >{location}</p>
-                        
+                        >{degree}</h3>
+
+                        <p>{result}</p>
                     </div>
+
+                    <p>{location}</p>
                     
                 </div>
             </div>
 
             <div className={"collapsee" + (isOpen ? "" : " closed")} 
                 style={{
-                    marginLeft: "100px", //to skip space beneath image
+                    marginLeft: isTabletOrMobile ? "1rem" : "100px", //to skip space beneath image, unless screen is small
                     marginRight: "2rem",
                 }}
             >

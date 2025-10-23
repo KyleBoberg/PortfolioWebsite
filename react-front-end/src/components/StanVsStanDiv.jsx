@@ -20,7 +20,7 @@ export default function StanVsStanDiv() {
         >
 
             <div className="collapser" onClick={toggleCollapse} 
-                style={{alignItems: "center"}}
+                style={{alignItems: "center", flexWrap: "wrap"}}
             >
                 <h2>Stan vs Stan</h2>  
                 <p style={{flexGrow: 1}}>Online multi-player real time song guessing game. Login with Spotify, and try to out "stan" your friends.</p>

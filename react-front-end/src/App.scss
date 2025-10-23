@@ -14,6 +14,14 @@
   font-style: normal;
 }
 
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+}
+
+
 .aspect-ratio {
   position: relative;
   width: 95%;
@@ -36,7 +44,12 @@
   gap: .3rem;
   padding-right: .6rem;
   & a {
-    color: black;
+    @media (prefers-color-scheme: light) {
+      color: black;
+    }
+    @media (prefers-color-scheme: dark) {
+      color: white;
+    }
     text-decoration: underline;
     &:hover {
       color:#ffeaa7;
@@ -80,9 +93,8 @@ p {
 
 .skillTagContainer {
   display: flex;
-  gap: 5px;
-  flex-wrap: nowrap;
-  max-width: 50%;
+  gap: 5px; 
+  flex-wrap: wrap;
 }
 
 .collapser {
@@ -101,6 +113,15 @@ p {
   &.closed {
     max-height: 0;
   }
+}
+
+.logo-image {
+  border-radius: 8px;
+  width: 100px;
+  height: 100px;
+  max-width: 20%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;                 
 }
 
 
@@ -184,7 +205,12 @@ $text-color: #f10e0e;
 }
 
 .frosted-glass {
-  background: rgba(255, 255, 255, 0.307);
+  @media (prefers-color-scheme: light) {
+    background: rgba(255, 255, 255, 0.300);
+  }
+  @media (prefers-color-scheme: dark) {
+    background: rgba(0, 0, 0, 0.3);
+  }
   border-radius: 10px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.619);
   backdrop-filter: blur(50px);
@@ -193,8 +219,15 @@ $text-color: #f10e0e;
 }
 
 :root {
-  --color-bg1: rgb(255, 255, 255);
-  --color-bg2: rgb(185, 226, 186);
+  @media (prefers-color-scheme: light) {
+    --color-bg1: rgb(255, 255, 255);
+    --color-bg2: rgb(185, 226, 186);
+  }
+  @media (prefers-color-scheme: dark) {
+    --color-bg1: rgb(32, 32, 32);
+    --color-bg2: rgb(40, 53, 40);
+  }
+
   --color1: 18, 113, 255;
   --color2: 221, 74, 255;
   --color3: 100, 220, 255;

@@ -1,8 +1,12 @@
 import { useState } from "react";
+import { useMediaQuery } from 'react-responsive'
+
 
 export default function JobExperienceDiv({company, companyImage, title, location, dateRange, bulletPoints, skillTags, color1, color2}) {
     
     const [isOpen, setIsOpen] = useState(false);
+    const isTabletOrMobile = useMediaQuery({ maxWidth: 1224 })
+
 
     const toggleCollapse = () => {
         setIsOpen(!isOpen);
@@ -18,42 +22,43 @@ export default function JobExperienceDiv({company, companyImage, title, location
             <div className="collapser"
                 onClick={toggleCollapse}>
                 <img 
-                    style={{
-                        borderRadius: '8px',
-                        maxWidth: '100px',
-                        maxHeight: '100px'
-                    }}
+                    className="logo-image"
                     src={companyImage} 
                 />
                 <div
                     style={{
-                        width: "100%",
+                        flexGrow: 1,
+                        minWidth: 0,
                     }}
                 >
                     {/* top part of header with company name, title, and date range */}
                     <div
                         style={{
                             display: "flex",
-                            alignItems: "start",   
+                            alignItems: "center",   
+                            flexWrap: "wrap",
                         }}>
-                        <div
+                        <h2
                             style={{flexGrow: 1}}
-                        >
-                            <h2>{company}</h2>
-                            <h3>{title}</h3>
-                        </div>
+                        >{company}</h2>
+                        
                         <h4>{dateRange}</h4>
                     </div>
+
+                    <h3>{title}</h3>
 
                     {/* bottom part of header with location and skill tags */}
                     <div
                         style={{
                             display: "flex",
                             alignItems: "center",
+                            flexWrap: "wrap",   
                         }}
                     >
                         <p
                             style={{
+                                whiteSpace: "nowrap",
+                                marginRight: "1rem",
                                 flexGrow: 1,
                             }}
                         >{location}</p>
@@ -76,7 +81,7 @@ export default function JobExperienceDiv({company, companyImage, title, location
 
             <div className={"collapsee" + (isOpen ? "" : " closed")} 
                 style={{
-                    marginLeft: "100px", //to skip space beneath image
+                    marginLeft: isTabletOrMobile ? "1rem" : "100px", //to skip space beneath image, unless screen is small
                     marginRight: "2rem",
                 }}
             >
