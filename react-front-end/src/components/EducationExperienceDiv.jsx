@@ -19,7 +19,7 @@ export default function EducationExperienceDiv({school, schoolImage, degree, loc
             }}
         >
 
-            <div className="collapser"
+            <div className={"collapser" + (isOpen ? "" : " closed")}
                 onClick={toggleCollapse}>
                 <img 
                     className="logo-image"

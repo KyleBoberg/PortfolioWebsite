@@ -58,7 +58,7 @@ export default function Kyle() {
             }} >
                 <p>2024 summa cum laude graduate from Stevens Institute of Technology working full time in tech.</p> 
                 <p>Willing to work hard to get it done. Love to figure stuff out. </p> 
-                <p>Check out some of my personal projects, job experince, and education highlights below.</p>
+                <p>Check out some of my personal projects, job experience, and education highlights below.</p>
             </div>
 
 

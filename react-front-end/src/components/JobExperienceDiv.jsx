@@ -19,7 +19,7 @@ export default function JobExperienceDiv({company, companyImage, title, location
             }}
         >
 
-            <div className="collapser"
+            <div className={"collapser" + (isOpen ? "" : " closed")}
                 onClick={toggleCollapse}>
                 <img 
                     className="logo-image"

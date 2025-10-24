@@ -19,7 +19,7 @@ export default function StanVsStanDiv() {
             }}
         >
 
-            <div className="collapser" onClick={toggleCollapse} 
+            <div className={"collapser" + (isOpen ? "" : " closed")} onClick={toggleCollapse} 
                 style={{alignItems: "center", flexWrap: "wrap"}}
             >
                 <h2>Stan vs Stan</h2>  
