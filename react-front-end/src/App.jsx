@@ -1,18 +1,11 @@
 import './App.scss'
 
-import { useRef } from 'react'
-
-import NavigationBar from './components/NavigationBar'
 import Projects from './components/Projects'
 import Experience from './components/Experience'  
 import Education from './components/Education'
 import Kyle from './components/Kyle'
 
 function App() {
-  const projectsSectionRef = useRef(null);
-  const experienceSectionRef = useRef(null);
-
-
   return (
     <>
       <div className="gradient-bg">
