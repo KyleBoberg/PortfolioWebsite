@@ -7,7 +7,7 @@ export default function Education() {
             <div>
                 <EducationExperienceDiv
                     school="Stevens Institute of Technology"
-                    schoolImage="https://media.licdn.com/dms/image/v2/C4E0BAQG4-wgic6mvtQ/company-logo_200_200/company-logo_200_200/0/1659965758390/stevens_institute_of_technology_logo?e=1762992000&v=beta&t=3R7RnEDtvWXbrSJfHiQAHeixnGmId0lc34_3v8_XDa0" 
+                    schoolImage="/stevens_institute_of_technology_logo.jpg" 
                     degree="B.S. Computer Science"
                     location="Hoboken, NJ"
                     dateRange="Graduated May 2024"
